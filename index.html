@@ -13,8 +13,7 @@
         .tab-content {display: none; animation: fadeIn 0.5s;}
         .tab-content.active {display: block;}
         @keyframes fadeIn {from {opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); }}
-        .calendar-container {position: relative; padding-bottom: 75%; height: 0; overflow: hidden; max-width: 100%;}
-        .calendar_container iframe {position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+        #google-calendar {width: 100%; aspect-ratio: 3/2;}
     </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
@@ -65,15 +64,15 @@
                 </div>
 
                 <h3 class="text-xl font-semibold text-black mb-3">Competition Calendar</h3>
-                <div class="calendar-container rounded-lg border">
-                    <iframe src="https://calendar.google.com/calendar/embed?src=coppellmathteam%40gmail.com&ctz=America%2FChicago" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+                <div class="rounded-lg border overflow-hidden">
+                    <iframe id="google-calendar" src="https://calendar.google.com/calendar/embed?src=coppellmathteam%40gmail.com&ctz=America%2FChicago" style="border: 0;" frameborder="0" scrolling="no"></iframe>
                 </div>
             </div>
             <div id="general" class="tab-content">
-                <h2 class="text-2xl font-bold mb-4 text-gray-700 border-b pb-2">General Math</h2>"
+                <h2 class="text-2xl font-bold mb-4 text-gray-700 border-b pb-2">General Math</h2>
             </div>
             <div id="uil" class="tab-content">
-                <h2 class="text-2xl font-bold mb-4 text-gray-700 border-b pb-2">Math UIL</h2>"
+                <h2 class="text-2xl font-bold mb-4 text-gray-700 border-b pb-2">Math UIL</h2>
             </div>
         </main>
     </div>
